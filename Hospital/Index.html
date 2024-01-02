@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NORVIK</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./Styles/Index.css">
+</head>
+<body>
+<div class="navbar" >
+                <div class="navbar navbar-light" style="background-Color:#483D8B">
+                <a class="navbar-brand" href="./Pages/Home.html" style="font-Size:20px;color:#FFFFFF">HOME</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Dropdown
+                    
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./Pages/Doctor's form.html">DOCTOR'S FORM</a>
+                        <a href="./Contact.html">CONTACT</a>
+                        
+                    </div>
+                </div> 
+                <a class="navbar-brand navbar-right" href="#">
+                    <img alt="Hospital Logo" src="." />
+                  
+                </a>
+                </div>
+            </div>
+            <h1 style="text-align: center; font-size: xx-large; color: whitesmoke;">WELCOME TO NORVIK HOSPITAL UGANDA</h1>
+            
+            <style>
+                * {box-sizing: border-box;}
+                body {font-family: Verdana, sans-serif;}
+                .mySlides {display: none;}
+                img {vertical-align: middle;}
+                
+                /* Slideshow container */
+                .slideshow-container {
+                  max-width: 1000px;
+                  position: relative;
+                  margin: auto;
+                }
+                
+                /* Caption text */
+                .text {
+                  color: #f2f2f2;
+                  font-size: 15px;
+                  padding: 8px 12px;
+                  position: absolute;
+                  bottom: 8px;
+                  width: 100%;
+                  text-align: center;
+                }
+                
+                /* Number text (1/3 etc) */
+                .numbertext {
+                  color: #f2f2f2;
+                  font-size: 12px;
+                  padding: 8px 12px;
+                  position: absolute;
+                  top: 0;
+                }
+                
+                /* The dots/bullets/indicators */
+                .dot {
+                  height: 15px;
+                  width: 15px;
+                  margin: 0 2px;
+                  background-color: #bbb;
+                  border-radius: 50%;
+                  display: inline-block;
+                  transition: background-color 0.6s ease;
+                }
+                
+                .active {
+                  background-color: #717171;
+                }
+                
+                /* Fading animation */
+                .fade {
+                  animation-name: fade;
+                  animation-duration: 1.5s;
+                }
+                
+                @keyframes fade {
+                  from {opacity: .4} 
+                  to {opacity: 1}
+                }
+                
+                /* On smaller screens, decrease text size */
+                @media only screen and (max-width: 300px) {
+                  .text {font-size: 11px}
+                }
+                </style>
+                </head>
+                <body>
+                
+                <h2 style="color: #f2f2f2;">Norvik Hospital</h2>
+                <p style="color: #FFFFFF;">
+
+                    We are privileged to house one of the largest groups of dedicated specialists in the fields of gynecology, fertility and maternity in East and Central Africa. Our team consists of experienced medical doctors, scientists, nurses, and counselors from Europe and the Diaspora.
+                    
+                    We are committed to providing meticulous individualized and compassionate reproductive healthcare to all our patients.
+                    
+                    We do this with utmost professionalism and passion in a safe and supportive environment, with state of the art technology guided by the highest ethical standard
+                    </p>
+                
+                <div class="slideshow-container">
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="./Images/group-african-medical-students-posed-outdoor-against-university-door_627829-392.avif" style="width:100%">
+                  
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="./Images/group-male-african-medical-students-college_627829-357.jpg" style="width:100%">
+                 
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="./Images/medic-patient-looking-human-body-analysis_482257-21552.avif" style="width:100%">
+                  
+                </div>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+                
+                <script>
+                
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+                </script>
+            
+            </div>
+         
+            
+                </body>
+            </body>
+</html>
